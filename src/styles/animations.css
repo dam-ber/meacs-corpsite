@@ -1,0 +1,31 @@
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+    text-shadow: none;
+  }
+  20% {
+    transform: translate(-2px, 2px);
+    text-shadow: 2px 0 #ff0080, -2px 0 #00ff00;
+  }
+  40% {
+    transform: translate(-2px, -2px);
+    text-shadow: 3px 0 #ff0080, -3px 0 #00ff00;
+  }
+  60% {
+    transform: translate(2px, 2px);
+    text-shadow: 2px 0 #ff0080, -2px 0 #00ff00;
+  }
+  80% {
+    transform: translate(2px, -2px);
+    text-shadow: none;
+  }
+  100% {
+    transform: translate(0);
+    text-shadow: none;
+  }
+}
+
+.glitch-text {
+  animation: glitch 3s infinite;
+  animation-timing-function: steps(1, end);
+}
